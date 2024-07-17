@@ -1,0 +1,31 @@
+{% extends "myapp2/base.html" %}
+
+{% block title %}Список {{ user.name }}{% endblock title %}
+
+{% block content %}
+    <h2>{{ user.name }}</h2>
+    <table>
+        <h2>Продукты за неделю</h2>
+        {% for product in products_week %}
+        <tr>
+            <td><a>{{ product.name }}:{{ product.price }}$  {{ product.date }}</a>
+        </tr>
+        {% endfor %}
+    </table>
+    <table>
+        <h2>Продукты за месяц</h2>
+        {% for product in products_month %}
+        <tr>
+            <td><a>{{ product.name }}:{{ product.price }}$  {{ product.date }}</a>
+        </tr>
+        {% endfor %}
+    </table>
+    <table>
+        <h2>Продукты за год</h2>
+        {% for product in products_year %}
+        <tr>
+            <td><a>{{ product.name }}:{{ product.price }}$  {{ product.date }}</a>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock content %}
