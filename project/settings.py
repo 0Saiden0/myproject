@@ -25,11 +25,13 @@ import os
 SECRET_KEY = os.getenv('SECRET_KEY') # 'django-insecure-mm+@@l(_llu53)ljrma8l#yu^-)b_@&vcqlyr#s)lkog5%6xf-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'sisyphusy.pythonanywhere.com',
+]
 
 
 # Application definition
